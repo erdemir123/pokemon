@@ -24,8 +24,8 @@ export default async function page({ params }) {
       <h3>Power</h3>
       {data.moves.map((item) => {
         return (
-          <div>
-            <div>{item.move.name}</div>
+          <div className={Styles.cardMove}>
+            ➡️<div>{item.move.name}</div>
           </div>
         );
       })}
