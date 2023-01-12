@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Styles from "./form.module.css"
 
-async function getCountry() {
+async function getPokemon() {
   let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=150");
   return res.json();
 }
 export default async function Home() {
-  let data = await getCountry();
+  let data = await getPokemon();
   return (
     <div className={Styles.container} >
       {data?.results.map((item, index) => (
