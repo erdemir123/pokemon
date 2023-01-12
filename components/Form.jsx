@@ -12,7 +12,7 @@ export default async function Home() {
     <div className={Styles.container} >
       {data?.results.map((item, index) => (
         <Link href={`/pokemon/${item.name}`} key={index} className={Styles.card}>
-          <Image  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+1}.png`} alt={item.name} width={200} height={200} />
+          <Image  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+1}.png`}  alt={item.name} width={200} height={200} />
           <div className={Styles.cardTitle}>{item?.name}</div>
         </Link>
         
